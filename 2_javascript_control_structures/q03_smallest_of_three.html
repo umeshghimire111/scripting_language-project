@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smallest Among Three Numbers</title>
+</head>
+<body>
+    <h2>Find Smallest Among Three Numbers</h2>
+    <script type="text/javascript">
+        let a = parseInt(prompt("Enter the first number"));
+        let b = parseInt(prompt("Enter the second number"));
+        let c = parseInt(prompt("Enter the third number"));
+        document.write("<h3>Output:</h3>");
+        if (a < b && a < c) {
+            document.write(a + " is the smallest<br>");
+        } else if (b < a && b < c) {
+            document.write(b + " is the smallest<br>");
+        } else if (c < a && c < b) {
+            document.write(c + " is the smallest<br>");
+        } else {
+            document.write("All are equal<br>");
+        }
+    </script>
+</body>
+</html>

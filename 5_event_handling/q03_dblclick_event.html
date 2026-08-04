@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Double Click Demo</title>
+</head>
+<body>
+    <h1>Double Click Demo</h1>
+    <button id="btn">Double Click Me</button>
+
+    <script type="text/javascript">
+        const btn = document.getElementById("btn");
+        btn.addEventListener("dblclick", function() {
+            document.write("<p style='color:purple'> ✅ dblclick event triggered!</p>");
+        });
+    </script>
+</body>
+</html>

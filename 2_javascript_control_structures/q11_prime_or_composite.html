@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime or Composite</title>
+</head>
+<body>
+    <h2>Check Prime or Composite Number</h2>
+    <script type="text/javascript">
+        let a = parseInt(prompt("Enter the number to find prime or composite"));
+        let count = 0;
+        for (let i = 1; i <= a; i++) {
+            if (a % i == 0) {
+                count++;
+            }
+        }
+        document.write("<h3>Output:</h3>");
+        if (count == 2) {
+            document.write("The given value is prime");
+        } else if (count > 2) {
+            document.write("The given value is composite");
+        } else {
+            document.write("The given value is neither prime nor composite");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model (BOM) Demos</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #8b5cf6;
+            --accent-hover: #7c3aed;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --code-bg: #0f172a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 { color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h2 { font-size: 1.4rem; color: #ddd6fe; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #c4b5fd;
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+        }
+
+        .btn-action {
+            background-color: var(--accent);
+            color: #ffffff;
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-action:hover { background-color: var(--accent-hover); }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .info-table th, .info-table td {
+            border: 1px solid var(--border);
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        .info-table th { background-color: #0f172a; color: var(--accent); }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Browser Objects (BOM)</h1>
+        <p class="subtitle">Window, Navigator, Location, History, and Screen Objects in JavaScript</p>
+    </header>
+
+    <div class="section-grid">
+
+        <!-- 1. Window Object -->
+        <div class="card">
+            <div>
+                <h2>1. Window Object</h2>
+                <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom: 0.5rem;">Represents the browser window and global execution context.</p>
+                <pre><code>console.log(window.innerWidth, window.innerHeight);
+console.log(window.outerWidth, window.outerHeight);
+console.log(window.devicePixelRatio);
+alert('Hello!');
+confirm('Are you sure?');</code></pre>
+                <table class="info-table" id="window-table">
+                    <tr><th>Property</th><th>Live Value</th></tr>
+                    <tr><td>window.innerWidth</td><td id="win-iw">-</td></tr>
+                    <tr><td>window.innerHeight</td><td id="win-ih">-</td></tr>
+                    <tr><td>window.outerWidth</td><td id="win-ow">-</td></tr>
+                    <tr><td>window.outerHeight</td><td id="win-oh">-</td></tr>
+                    <tr><td>devicePixelRatio</td><td id="win-dpr">-</td></tr>
+                </table>
+            </div>
+            <div style="margin-top: 1rem;">
+                <button class="btn-action" onclick="alert('Hello from Window alert!')">Test Alert</button>
+                <button class="btn-action" onclick="confirm('Are you sure?')">Test Confirm</button>
+                <button class="btn-action" onclick="prompt('Enter your name:')">Test Prompt</button>
+            </div>
+        </div>
+
+        <!-- 2. Navigator Object -->
+        <div class="card">
+            <div>
+                <h2>2. Navigator Object</h2>
+                <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom: 0.5rem;">Information about the browser and device.</p>
+                <pre><code>console.log(navigator.userAgent);
+console.log(navigator.appName);
+console.log(navigator.platform);
+console.log(navigator.language);
+console.log(navigator.onLine);</code></pre>
+                <table class="info-table">
+                    <tr><th>Property</th><th>Value</th></tr>
+                    <tr><td>appName</td><td id="nav-app">-</td></tr>
+                    <tr><td>platform</td><td id="nav-plat">-</td></tr>
+                    <tr><td>language</td><td id="nav-lang">-</td></tr>
+                    <tr><td>cookieEnabled</td><td id="nav-cookie">-</td></tr>
+                    <tr><td>onLine</td><td id="nav-online">-</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. Location Object -->
+        <div class="card">
+            <div>
+                <h2>3. Location Object</h2>
+                <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom: 0.5rem;">Information about the current URL.</p>
+                <pre><code>console.log(location.href);
+console.log(location.protocol);
+console.log(location.hostname);
+console.log(location.pathname);</code></pre>
+                <table class="info-table">
+                    <tr><th>Property</th><th>Value</th></tr>
+                    <tr><td>href</td><td id="loc-href" style="word-break: break-all;">-</td></tr>
+                    <tr><td>protocol</td><td id="loc-proto">-</td></tr>
+                    <tr><td>hostname</td><td id="loc-host">-</td></tr>
+                    <tr><td>pathname</td><td id="loc-path">-</td></tr>
+                </table>
+            </div>
+            <div style="margin-top: 1rem;">
+                <button class="btn-action" onclick="location.reload()">Reload Page</button>
+            </div>
+        </div>
+
+        <!-- 4. History Object -->
+        <div class="card">
+            <div>
+                <h2>4. History Object</h2>
+                <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom: 0.5rem;">Browser session history stack.</p>
+                <pre><code>console.log(history.length);
+history.back();
+history.forward();
+history.go(-1);</code></pre>
+                <p style="margin-top: 1rem;"><strong>History Length:</strong> <span id="hist-len" style="color:var(--accent); font-weight:bold;">-</span> entries</p>
+            </div>
+            <div style="margin-top: 1rem;">
+                <button class="btn-action" onclick="history.back()">history.back()</button>
+                <button class="btn-action" onclick="history.forward()">history.forward()</button>
+            </div>
+        </div>
+
+        <!-- 5. Screen Object -->
+        <div class="card">
+            <div>
+                <h2>5. Screen Object</h2>
+                <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom: 0.5rem;">Information about the physical monitor screen.</p>
+                <pre><code>console.log(screen.width, screen.height);
+console.log(screen.availWidth, screen.availHeight);
+console.log(screen.colorDepth);</code></pre>
+                <table class="info-table">
+                    <tr><th>Property</th><th>Value</th></tr>
+                    <tr><td>screen.width</td><td id="scr-w">-</td></tr>
+                    <tr><td>screen.height</td><td id="scr-h">-</td></tr>
+                    <tr><td>availWidth</td><td id="scr-aw">-</td></tr>
+                    <tr><td>availHeight</td><td id="scr-ah">-</td></tr>
+                    <tr><td>colorDepth</td><td id="scr-cd">-</td></tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Compiled By: Er. Gaurab Mishra | Browser Object Model Reference</p>
+    </footer>
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    // Window
+    document.getElementById('win-iw').innerText = window.innerWidth;
+    document.getElementById('win-ih').innerText = window.innerHeight;
+    document.getElementById('win-ow').innerText = window.outerWidth;
+    document.getElementById('win-oh').innerText = window.outerHeight;
+    document.getElementById('win-dpr').innerText = window.devicePixelRatio;
+
+    // Navigator
+    document.getElementById('nav-app').innerText = navigator.appName;
+    document.getElementById('nav-plat').innerText = navigator.platform;
+    document.getElementById('nav-lang').innerText = navigator.language;
+    document.getElementById('nav-cookie').innerText = navigator.cookieEnabled;
+    document.getElementById('nav-online').innerText = navigator.onLine;
+
+    // Location
+    document.getElementById('loc-href').innerText = location.href;
+    document.getElementById('loc-proto').innerText = location.protocol;
+    document.getElementById('loc-host').innerText = location.hostname || '(local file)';
+    document.getElementById('loc-path').innerText = location.pathname;
+
+    // History
+    document.getElementById('hist-len').innerText = history.length;
+
+    // Screen
+    document.getElementById('scr-w').innerText = screen.width + " px";
+    document.getElementById('scr-h').innerText = screen.height + " px";
+    document.getElementById('scr-aw').innerText = screen.availWidth + " px";
+    document.getElementById('scr-ah').innerText = screen.availHeight + " px";
+    document.getElementById('scr-cd').innerText = screen.colorDepth + " bits";
+});
+</script>
+
+</body>
+</html>

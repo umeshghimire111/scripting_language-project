@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial of a Number (Function)</title>
+</head>
+<body>
+    <h2>Program to Display the Factorial of a Number</h2>
+    <p><em>Function with Arguments and No Return Values</em></p>
+
+    <script type="text/javascript">
+        function factorial(num) {
+            var fact = 1;
+            for (var i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            document.write("<h3>Output:</h3>");
+            document.write("The factorial of " + num + " is " + fact);
+        }
+
+        var number = parseInt(prompt("Enter a number:"));
+        factorial(number);
+    </script>
+</body>
+</html>

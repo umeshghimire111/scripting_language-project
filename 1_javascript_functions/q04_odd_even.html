@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odd or Even (Function)</title>
+</head>
+<body>
+    <h2>Program to Check Whether the Number is Odd or Even</h2>
+    <p><em>Function with Arguments and Return Values</em></p>
+
+    <script type="text/javascript">
+        function isEven(num) {
+            return num % 2 === 0;
+        }
+
+        var number = parseInt(prompt("Enter a number:"));
+        document.write("<h3>Output:</h3>");
+        if (isEven(number)) {
+            document.write(number + " is Even.");
+        } else {
+            document.write(number + " is Odd.");
+        }
+    </script>
+</body>
+</html>

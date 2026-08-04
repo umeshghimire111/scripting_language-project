@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU BCA 4th Sem Scripting Language Practical Lab Directory</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --accent: #58a6ff;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 2rem;
+            line-height: 1.5;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 { color: var(--accent); font-size: 2rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--text-muted); font-size: 1rem; }
+
+        .folder-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        .folder-header {
+            background: #21262d;
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #f0f6fc;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0.5rem 0;
+        }
+
+        .file-item {
+            padding: 0.6rem 1.25rem;
+            border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .file-item:last-child { border-bottom: none; }
+
+        .file-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .file-item a:hover { text-decoration: underline; }
+
+        .file-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🎓 TU BCA 4th Semester Scripting Language</h1>
+        <p class="subtitle">Practical Lab Programs Index | Prepared by Er. Gaurab Mishra</p>
+    </header>
+
+    <!-- Folder 1 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 1_javascript_functions</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="1_javascript_functions/q01_sum_of_two_numbers.html">q01_sum_of_two_numbers.html</a><span class="file-desc">No Args | No Return</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q02_area_of_rectangle.html">q02_area_of_rectangle.html</a><span class="file-desc">No Args | Return Value</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q03_positive_negative_zero.html">q03_positive_negative_zero.html</a><span class="file-desc">With Args | No Return</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q04_odd_even.html">q04_odd_even.html</a><span class="file-desc">With Args | Return Value</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q05_greatest_of_three.html">q05_greatest_of_three.html</a><span class="file-desc">No Args | No Return</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q06_smallest_of_three.html">q06_smallest_of_three.html</a><span class="file-desc">No Args | Return Value</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q07_calculator_switch.html">q07_calculator_switch.html</a><span class="file-desc">With Args | No Return</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q08_multiplication_table.html">q08_multiplication_table.html</a><span class="file-desc">With Args | Return Value</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q09_palindrome.html">q09_palindrome.html</a><span class="file-desc">No Args | No Return</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q10_armstrong.html">q10_armstrong.html</a><span class="file-desc">No Args | Return Value</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q11_factorial.html">q11_factorial.html</a><span class="file-desc">With Args | No Return</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q12_factors.html">q12_factors.html</a><span class="file-desc">With Args | Return Value</span></li>
+            <li class="file-item"><a href="1_javascript_functions/q13_fibonacci.html">q13_fibonacci.html</a><span class="file-desc">With Args | No Return</span></li>
+        </ul>
+    </div>
+
+    <!-- Folder 2 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 2_javascript_control_structures</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="2_javascript_control_structures/q01_positive_negative_zero.html">q01_positive_negative_zero.html</a><span class="file-desc">If-Else If</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q02_odd_even.html">q02_odd_even.html</a><span class="file-desc">Nested If</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q03_smallest_of_three.html">q03_smallest_of_three.html</a><span class="file-desc">Logical AND Operators</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q04_calculator_switch.html">q04_calculator_switch.html</a><span class="file-desc">Switch Case</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q05_multiplication_table.html">q05_multiplication_table.html</a><span class="file-desc">For Loop</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q06_factorial.html">q06_factorial.html</a><span class="file-desc">For Loop</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q07_factors.html">q07_factors.html</a><span class="file-desc">For Loop</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q08_fibonacci.html">q08_fibonacci.html</a><span class="file-desc">For Loop</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q09_palindrome.html">q09_palindrome.html</a><span class="file-desc">While Loop</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q10_armstrong.html">q10_armstrong.html</a><span class="file-desc">While Loop</span></li>
+            <li class="file-item"><a href="2_javascript_control_structures/q11_prime_or_composite.html">q11_prime_or_composite.html</a><span class="file-desc">For Loop</span></li>
+        </ul>
+    </div>
+
+    <!-- Folder 3 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 3_browser_objects_bom</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="3_browser_objects_bom/q01_window_object.html">q01_window_object.html</a><span class="file-desc">Window Properties & Alerts</span></li>
+            <li class="file-item"><a href="3_browser_objects_bom/q02_navigator_object.html">q02_navigator_object.html</a><span class="file-desc">UserAgent, Platform, Language</span></li>
+            <li class="file-item"><a href="3_browser_objects_bom/q03_location_object.html">q03_location_object.html</a><span class="file-desc">URL Properties</span></li>
+            <li class="file-item"><a href="3_browser_objects_bom/q04_history_object.html">q04_history_object.html</a><span class="file-desc">History Navigation</span></li>
+            <li class="file-item"><a href="3_browser_objects_bom/q05_screen_object.html">q05_screen_object.html</a><span class="file-desc">Screen Width & Height</span></li>
+        </ul>
+    </div>
+
+    <!-- Folder 4 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 4_document_object_model_dom</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="4_document_object_model_dom/q01_get_element_by_id.html">q01_get_element_by_id.html</a><span class="file-desc">getElementById</span></li>
+            <li class="file-item"><a href="4_document_object_model_dom/q02_get_elements_by_class_name.html">q02_get_elements_by_class_name.html</a><span class="file-desc">getElementsByClassName</span></li>
+            <li class="file-item"><a href="4_document_object_model_dom/q03_get_elements_by_tag_name.html">q03_get_elements_by_tag_name.html</a><span class="file-desc">getElementsByTagName</span></li>
+            <li class="file-item"><a href="4_document_object_model_dom/q04_query_selector.html">q04_query_selector.html</a><span class="file-desc">querySelector</span></li>
+            <li class="file-item"><a href="4_document_object_model_dom/q05_query_selector_all.html">q05_query_selector_all.html</a><span class="file-desc">querySelectorAll</span></li>
+            <li class="file-item"><a href="4_document_object_model_dom/q06_create_element.html">q06_create_element.html</a><span class="file-desc">createElement & appendChild</span></li>
+        </ul>
+    </div>
+
+    <!-- Folder 5 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 5_event_handling</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="5_event_handling/q01_event_object.html">q01_event_object.html</a><span class="file-desc">Event Object Properties</span></li>
+            <li class="file-item"><a href="5_event_handling/q02_click_event.html">q02_click_event.html</a><span class="file-desc">Click Event</span></li>
+            <li class="file-item"><a href="5_event_handling/q03_dblclick_event.html">q03_dblclick_event.html</a><span class="file-desc">Double Click Event</span></li>
+            <li class="file-item"><a href="5_event_handling/q04_mouseover_mouseout.html">q04_mouseover_mouseout.html</a><span class="file-desc">Mouse Over & Out Events</span></li>
+        </ul>
+    </div>
+
+    <!-- Folder 6 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 6_cookies_and_validation</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="6_cookies_and_validation/q01_cookies.html">q01_cookies.html</a><span class="file-desc">Cookie Create, Read & Delete</span></li>
+            <li class="file-item"><a href="6_cookies_and_validation/q02_form_validation.html">q02_form_validation.html</a><span class="file-desc">Client Side Form Validation</span></li>
+        </ul>
+    </div>
+
+    <!-- Folder 7 -->
+    <div class="folder-card">
+        <div class="folder-header">📁 7_php_programs</div>
+        <ul class="file-list">
+            <li class="file-item"><a href="7_php_programs/q01_sum_of_two_numbers.php">q01_sum_of_two_numbers.php</a><span class="file-desc">PHP Sum</span></li>
+            <li class="file-item"><a href="7_php_programs/q02_area_of_rectangle.php">q02_area_of_rectangle.php</a><span class="file-desc">PHP Area Rectangle</span></li>
+            <li class="file-item"><a href="7_php_programs/q03_area_of_circle.php">q03_area_of_circle.php</a><span class="file-desc">PHP Area Circle</span></li>
+            <li class="file-item"><a href="7_php_programs/q04_volume_of_sphere.php">q04_volume_of_sphere.php</a><span class="file-desc">PHP Volume Sphere</span></li>
+            <li class="file-item"><a href="7_php_programs/q05_odd_even.php">q05_odd_even.php</a><span class="file-desc">PHP Odd/Even</span></li>
+            <li class="file-item"><a href="7_php_programs/q06_positive_negative_zero.php">q06_positive_negative_zero.php</a><span class="file-desc">PHP Positive/Negative/Zero</span></li>
+            <li class="file-item"><a href="7_php_programs/q07_greater_of_two.php">q07_greater_of_two.php</a><span class="file-desc">PHP Greater of Two</span></li>
+            <li class="file-item"><a href="7_php_programs/q08_smallest_of_three.php">q08_smallest_of_three.php</a><span class="file-desc">PHP Smallest of Three</span></li>
+            <li class="file-item"><a href="7_php_programs/q09_palindrome.php">q09_palindrome.php</a><span class="file-desc">PHP Palindrome</span></li>
+            <li class="file-item"><a href="7_php_programs/q10_armstrong.php">q10_armstrong.php</a><span class="file-desc">PHP Armstrong</span></li>
+            <li class="file-item"><a href="7_php_programs/q11_prime_or_composite.php">q11_prime_or_composite.php</a><span class="file-desc">PHP Prime/Composite</span></li>
+            <li class="file-item"><a href="7_php_programs/q12_factors.php">q12_factors.php</a><span class="file-desc">PHP Factors</span></li>
+            <li class="file-item"><a href="7_php_programs/q13_factorial.php">q13_factorial.php</a><span class="file-desc">PHP Factorial</span></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>TU BCA 4th Semester Scripting Language Practical Manual | Er. Gaurab Mishra</p>
+    </footer>
+</div>
+
+</body>
+</html>

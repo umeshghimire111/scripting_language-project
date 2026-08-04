@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smallest Number (Function)</title>
+</head>
+<body>
+    <h2>Program to Find the Smallest Number Among Three Numbers</h2>
+    <p><em>Function with No Arguments and Return Values</em></p>
+
+    <script type="text/javascript">
+        function findSmallest() {
+            var num1 = parseInt(prompt("Enter the first number:"));
+            var num2 = parseInt(prompt("Enter the second number:"));
+            var num3 = parseInt(prompt("Enter the third number:"));
+            return Math.min(num1, num2, num3);
+        }
+
+        var smallest = findSmallest();
+        document.write("<h3>Output:</h3>");
+        document.write("The smallest number is " + smallest);
+    </script>
+</body>
+</html>

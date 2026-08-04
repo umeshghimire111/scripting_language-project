@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Check (Function)</title>
+</head>
+<body>
+    <h2>Program to Check Whether a Number is Armstrong</h2>
+    <p><em>Function with No Arguments and Return Values</em></p>
+
+    <script type="text/javascript">
+        function isArmstrong() {
+            var num = prompt("Enter a number:");
+            var sum = 0;
+            var temp = num;
+            while (temp > 0) {
+                var digit = temp % 10;
+                sum += Math.pow(digit, 3);
+                temp = Math.floor(temp / 10);
+            }
+            return sum == num;
+        }
+
+        var result = isArmstrong();
+        document.write("<h3>Output:</h3>");
+        document.write(result ? "The number is an Armstrong number." : "The number is not an Armstrong number.");
+    </script>
+</body>
+</html>

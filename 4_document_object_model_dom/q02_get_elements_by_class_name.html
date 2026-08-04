@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByClassName Demo</title>
+</head>
+<body>
+    <p class="box">I am Box 1</p>
+    <p class="box">I am Box 2</p>
+    <p class="box">I am Box 3</p>
+
+    <script type="text/javascript">
+        // Returns HTMLCollection (Live collection)
+        const boxes = document.getElementsByClassName("box");
+        document.write("<h2>getElementsByClassName Result:</h2>");
+        document.write("<p>Number of boxes found: " + boxes.length + "</p>");
+        for(let i = 0; i < boxes.length; i++) {
+            document.write("<p>Box " + (i+1) + ": " + boxes[i].innerText + "</p>");
+            boxes[i].style.background = "yellow";
+        }
+    </script>
+</body>
+</html>

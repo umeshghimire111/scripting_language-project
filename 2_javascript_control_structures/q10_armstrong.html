@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong or Not</title>
+</head>
+<body>
+    <h2>Check Armstrong Number</h2>
+    <script type="text/javascript">
+        let n = parseInt(prompt("Enter the number"));
+        let temp = n;
+        let sum = 0, rem;
+        while (temp > 0) {
+            rem = temp % 10;
+            sum += rem * rem * rem;
+            temp = parseInt(temp / 10);
+        }
+        document.write("<h3>Output:</h3>");
+        if (sum == n) {
+            document.write("The given number is an Armstrong number");
+        } else {
+            document.write("The given number is not an Armstrong number");
+        }
+    </script>
+</body>
+</html>

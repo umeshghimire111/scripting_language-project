@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Control Structures Programs</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --code-bg: #0f172a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 { color: var(--accent); font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .program-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+        }
+
+        .program-title { font-size: 1.25rem; color: var(--text-main); margin-bottom: 0.5rem; }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #6ee7b7;
+            border: 1px solid var(--border);
+            margin-bottom: 1.2rem;
+            max-height: 250px;
+        }
+
+        .btn-run {
+            background-color: var(--accent);
+            color: #0f172a;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn-run:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+        }
+
+        .output-box {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #0f172a;
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            font-family: monospace;
+            display: none;
+            word-break: break-word;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>JavaScript Control Structures</h1>
+        <p class="subtitle">Collection of 11 JavaScript Control Flow & Loop Programs</p>
+    </header>
+
+    <div class="program-grid">
+
+        <!-- 1. Positive, Negative, or Zero -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">1. Positive, Negative, or Zero</h2>
+                <pre><code>let a = parseInt(prompt("Enter number:"));
+if (a > 0) {
+    document.write("The given value is positive");
+} else if (a < 0) {
+    document.write("The given value is negative");
+} else if (a == 0) {
+    document.write("The given value is zero");
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS1()">Run Program</button>
+            <div id="out_cs1" class="output-box"></div>
+        </div>
+
+        <!-- 2. Odd or Even -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">2. Odd or Even</h2>
+                <pre><code>let a = parseInt(prompt("Enter number:"));
+if (a > 0) {
+    if (a % 2 == 0) document.write("even");
+    else document.write("odd");
+} else {
+    document.write("not acceptable");
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS2()">Run Program</button>
+            <div id="out_cs2" class="output-box"></div>
+        </div>
+
+        <!-- 3. Smallest Among Three Numbers -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">3. Smallest Among Three Numbers</h2>
+                <pre><code>let a = parseInt(prompt("First:"));
+let b = parseInt(prompt("Second:"));
+let c = parseInt(prompt("Third:"));
+if (a < b && a < c) { ... }</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS3()">Run Program</button>
+            <div id="out_cs3" class="output-box"></div>
+        </div>
+
+        <!-- 4. Calculator Using Switch Case -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">4. Switch Calculator</h2>
+                <pre><code>let a = parseInt(prompt("First number"));
+let b = parseInt(prompt("Second number"));
+let ch = prompt("Operator (+, -, *, /, %)");
+switch (ch) { ... }</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS4()">Run Program</button>
+            <div id="out_cs4" class="output-box"></div>
+        </div>
+
+        <!-- 5. Multiplication Table -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">5. Multiplication Table</h2>
+                <pre><code>let a = parseInt(prompt("Enter number"));
+for (let i = 1; i <= 10; i++) {
+    let mul = a * i;
+    document.write(a + " X " + i + " = " + mul);
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS5()">Run Program</button>
+            <div id="out_cs5" class="output-box"></div>
+        </div>
+
+        <!-- 6. Factorial of a Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">6. Factorial of a Number</h2>
+                <pre><code>let f = 1;
+let n = parseInt(prompt("Enter number"));
+for (let i = 1; i <= n; i++) {
+    f = f * i;
+}
+document.write("Factorial is = " + f);</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS6()">Run Program</button>
+            <div id="out_cs6" class="output-box"></div>
+        </div>
+
+        <!-- 7. Factors of a Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">7. Factors of a Number</h2>
+                <pre><code>let n = parseInt(prompt("Enter number"));
+for (let i = 1; i <= n; i++) {
+    if (n % i == 0) {
+        document.write(i + " ");
+    }
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS7()">Run Program</button>
+            <div id="out_cs7" class="output-box"></div>
+        </div>
+
+        <!-- 8. Fibonacci Series -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">8. Fibonacci Series</h2>
+                <pre><code>let a = 0, b = 1, c;
+let n = parseInt(prompt("Terms count"));
+for (let i = 1; i <= n; i++) {
+    document.write(a + " ");
+    c = a + b; a = b; b = c;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS8()">Run Program</button>
+            <div id="out_cs8" class="output-box"></div>
+        </div>
+
+        <!-- 9. Palindrome Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">9. Palindrome Number</h2>
+                <pre><code>let result = 0, rem, temp;
+let n = parseInt(prompt("Enter number"));
+temp = n;
+while (n != 0) {
+    rem = n % 10;
+    result = result * 10 + rem;
+    n = parseInt(n / 10);
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS9()">Run Program</button>
+            <div id="out_cs9" class="output-box"></div>
+        </div>
+
+        <!-- 10. Armstrong Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">10. Armstrong Number</h2>
+                <pre><code>let n = parseInt(prompt("Enter number"));
+let temp = n, sum = 0, rem;
+while (temp > 0) {
+    rem = temp % 10;
+    sum += rem * rem * rem;
+    temp = parseInt(temp / 10);
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS10()">Run Program</button>
+            <div id="out_cs10" class="output-box"></div>
+        </div>
+
+        <!-- 11. Prime or Composite -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">11. Prime or Composite</h2>
+                <pre><code>let a = parseInt(prompt("Enter number"));
+let count = 0;
+for (let i = 1; i <= a; i++) {
+    if (a % i == 0) count++;
+}
+if (count == 2) document.write("Prime");</code></pre>
+            </div>
+            <button class="btn-run" onclick="runCS11()">Run Program</button>
+            <div id="out_cs11" class="output-box"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Compiled By: Er. Gaurab Mishra | JavaScript Control Structures Reference</p>
+    </footer>
+</div>
+
+<script>
+function showOutput(id, content) {
+    var el = document.getElementById(id);
+    el.style.display = 'block';
+    el.innerHTML = "<strong>Output:</strong><br>" + content;
+}
+
+// 1. Positive, Negative, or Zero
+function runCS1() {
+    let a = parseInt(prompt("Enter the number to find positive, negative, or zero"));
+    if (isNaN(a)) { showOutput('out_cs1', "Invalid number"); return; }
+    if (a > 0) {
+        showOutput('out_cs1', "The given value is positive");
+    } else if (a < 0) {
+        showOutput('out_cs1', "The given value is negative");
+    } else if (a == 0) {
+        showOutput('out_cs1', "The given value is zero");
+    } else {
+        showOutput('out_cs1', "The given value is unknown");
+    }
+}
+
+// 2. Odd or Even
+function runCS2() {
+    let a = parseInt(prompt("Enter the number to check"));
+    if (isNaN(a)) { showOutput('out_cs2', "Invalid number"); return; }
+    if (a > 0) {
+        if (a % 2 == 0) {
+            showOutput('out_cs2', "The given value is even");
+        } else {
+            showOutput('out_cs2', "The given value is odd");
+        }
+    } else {
+        showOutput('out_cs2', "The value is not acceptable");
+    }
+}
+
+// 3. Smallest Among Three Numbers
+function runCS3() {
+    let a = parseInt(prompt("Enter the first number"));
+    let b = parseInt(prompt("Enter the second number"));
+    let c = parseInt(prompt("Enter the third number"));
+    if (isNaN(a) || isNaN(b) || isNaN(c)) { showOutput('out_cs3', "Invalid numbers"); return; }
+    if (a < b && a < c) {
+        showOutput('out_cs3', a + " is the smallest");
+    } else if (b < a && b < c) {
+        showOutput('out_cs3', b + " is the smallest");
+    } else if (c < a && c < b) {
+        showOutput('out_cs3', c + " is the smallest");
+    } else {
+        showOutput('out_cs3', "All or some are equal");
+    }
+}
+
+// 4. Calculator Using Switch Case
+function runCS4() {
+    let a = parseInt(prompt("Enter the first number"));
+    let b = parseInt(prompt("Enter the second number"));
+    let ch = prompt("Enter the operator to be used (+, -, *, /, %)");
+    let result;
+    if (isNaN(a) || isNaN(b)) { showOutput('out_cs4', "Invalid input numbers"); return; }
+    switch (ch) {
+        case '+':
+            result = a + b;
+            showOutput('out_cs4', "The sum of two numbers is " + result);
+            break;
+        case '-':
+            result = a - b;
+            showOutput('out_cs4', "The difference of two numbers is " + result);
+            break;
+        case '*':
+            result = a * b;
+            showOutput('out_cs4', "The multiplication of these two numbers is " + result);
+            break;
+        case '/':
+            result = a / b;
+            showOutput('out_cs4', "The division of two numbers is " + result);
+            break;
+        case '%':
+            result = a % b;
+            showOutput('out_cs4', "The remainder obtained from the numbers is " + result);
+            break;
+        default:
+            showOutput('out_cs4', "Invalid Input");
+    }
+}
+
+// 5. Multiplication Table
+function runCS5() {
+    let a = parseInt(prompt("Enter the number"));
+    if (isNaN(a)) { showOutput('out_cs5', "Invalid number"); return; }
+    let res = "";
+    for (let i = 1; i <= 10; i++) {
+        let mul = a * i;
+        res += a + " X " + i + " = " + mul + "<br>";
+    }
+    showOutput('out_cs5', res);
+}
+
+// 6. Factorial of a Number
+function runCS6() {
+    let f = 1;
+    let n = parseInt(prompt("Enter the number to calculate factorial"));
+    if (isNaN(n) || n < 0) { showOutput('out_cs6', "Invalid number"); return; }
+    for (let i = 1; i <= n; i++) {
+        f = f * i;
+    }
+    showOutput('out_cs6', "The factorial is = " + f);
+}
+
+// 7. Factors of a Number
+function runCS7() {
+    let n = parseInt(prompt("Enter the number to calculate factors"));
+    if (isNaN(n) || n <= 0) { showOutput('out_cs7', "Invalid number"); return; }
+    let res = "The factors of the number are: ";
+    for (let i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            res += i + " ";
+        }
+    }
+    showOutput('out_cs7', res);
+}
+
+// 8. Fibonacci Series
+function runCS8() {
+    let a = 0, b = 1, c;
+    let n = parseInt(prompt("Enter the number of terms"));
+    if (isNaN(n) || n <= 0) { showOutput('out_cs8', "Invalid terms count"); return; }
+    let res = "The Fibonacci series is:<br>";
+    for (let i = 1; i <= n; i++) {
+        res += a + " ";
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    showOutput('out_cs8', res);
+}
+
+// 9. Palindrome Number
+function runCS9() {
+    let result = 0, rem, temp;
+    let n = parseInt(prompt("Enter the number"));
+    if (isNaN(n)) { showOutput('out_cs9', "Invalid number"); return; }
+    temp = n;
+    while (n != 0) {
+        rem = n % 10;
+        result = result * 10 + rem;
+        n = parseInt(n / 10);
+    }
+    if (result == temp) {
+        showOutput('out_cs9', "The given number is Palindrome");
+    } else {
+        showOutput('out_cs9', "The given number is not Palindrome");
+    }
+}
+
+// 10. Armstrong Number
+function runCS10() {
+    let n = parseInt(prompt("Enter the number"));
+    if (isNaN(n)) { showOutput('out_cs10', "Invalid number"); return; }
+    let temp = n;
+    let sum = 0, rem;
+    while (temp > 0) {
+        rem = temp % 10;
+        sum += rem * rem * rem;
+        temp = parseInt(temp / 10);
+    }
+    if (sum == n) {
+        showOutput('out_cs10', "The given number is an Armstrong number");
+    } else {
+        showOutput('out_cs10', "The given number is not an Armstrong number");
+    }
+}
+
+// 11. Prime or Composite
+function runCS11() {
+    let a = parseInt(prompt("Enter the number to find prime or composite"));
+    if (isNaN(a) || a <= 0) { showOutput('out_cs11', "Invalid number"); return; }
+    let count = 0;
+    for (let i = 1; i <= a; i++) {
+        if (a % i == 0) {
+            count++;
+        }
+    }
+    if (count == 2) {
+        showOutput('out_cs11', "The given value is prime");
+    } else if (count > 2) {
+        showOutput('out_cs11', "The given value is composite");
+    } else {
+        showOutput('out_cs11', "The given value is neither prime nor composite");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switch Calculator</title>
+</head>
+<body>
+    <h2>Calculator Using Switch Case</h2>
+    <script type="text/javascript">
+        let a = parseInt(prompt("Enter the first number"));
+        let b = parseInt(prompt("Enter the second number"));
+        let ch = prompt("Enter the operator to be used (+, -, *, /, %)");
+        let result;
+        document.write("<h3>Output:</h3>");
+        switch (ch) {
+            case '+':
+                result = a + b;
+                document.write("The sum of two numbers is ", result);
+                break;
+            case '-':
+                result = a - b;
+                document.write("The difference of two numbers is ", result);
+                break;
+            case '*':
+                result = a * b;
+                document.write("The multiplication of these two numbers is ", result);
+                break;
+            case '/':
+                result = a / b;
+                document.write("The division of two numbers is ", result);
+                break;
+            case '%':
+                result = a % b;
+                document.write("The remainder obtained from the numbers is ", result);
+                break;
+            default:
+                document.write("Invalid Input");
+        }
+    </script>
+</body>
+</html>

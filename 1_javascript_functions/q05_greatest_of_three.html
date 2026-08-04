@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greatest Number (Function)</title>
+</head>
+<body>
+    <h2>Program to Find the Greatest Number Among Three Numbers</h2>
+    <p><em>Function with No Arguments and No Return Values</em></p>
+
+    <script type="text/javascript">
+        function findGreatest() {
+            var num1 = parseInt(prompt("Enter the first number:"));
+            var num2 = parseInt(prompt("Enter the second number:"));
+            var num3 = parseInt(prompt("Enter the third number:"));
+            var greatest = num1;
+            if (num2 > greatest) greatest = num2;
+            if (num3 > greatest) greatest = num3;
+            document.write("<h3>Output:</h3>");
+            document.write("The greatest number is " + greatest);
+        }
+
+        findGreatest();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table (Function)</title>
+</head>
+<body>
+    <h2>Program to Display the Multiplication Table</h2>
+    <p><em>Function with Arguments and Return Values</em></p>
+
+    <script type="text/javascript">
+        function getMultiplicationTable(num) {
+            var table = "";
+            for (var i = 1; i <= 10; i++) {
+                table += num + " x " + i + " = " + (num * i) + "<br>";
+            }
+            return table;
+        }
+
+        var number = parseInt(prompt("Enter a number for the multiplication table:"));
+        var table = getMultiplicationTable(number);
+        document.write("<h3>Output:</h3>");
+        document.write(table);
+    </script>
+</body>
+</html>

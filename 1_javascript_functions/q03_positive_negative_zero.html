@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positive, Negative, or Zero (Function)</title>
+</head>
+<body>
+    <h2>Program to Check Whether the Number is Positive, Negative, or Zero</h2>
+    <p><em>Function with Arguments and No Return Values</em></p>
+
+    <script type="text/javascript">
+        function checkNumber(num) {
+            document.write("<h3>Output:</h3>");
+            if (num > 0) {
+                document.write(num + " is Positive.");
+            } else if (num < 0) {
+                document.write(num + " is Negative.");
+            } else {
+                document.write(num + " is Zero.");
+            }
+        }
+
+        var number = parseInt(prompt("Enter a number:"));
+        checkNumber(number);
+    </script>
+</body>
+</html>

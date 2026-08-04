@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>querySelectorAll Demo</title>
+</head>
+<body>
+    <div class="item">Item A</div>
+    <div class="item">Item B</div>
+    <div class="item">Item C</div>
+
+    <script type="text/javascript">
+        // Returns NodeList (Static collection)
+        const allItems = document.querySelectorAll(".item");
+        document.write("<h2>querySelectorAll Result:</h2>");
+        document.write("<p>Total items: " + allItems.length + "</p>");
+        allItems.forEach((item, index) => {
+            document.write("<p>Item " + (index+1) + ": " + item.innerText + "</p>");
+            item.style.color = "purple";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Check (Function)</title>
+</head>
+<body>
+    <h2>Program to Check Whether a Number is Palindrome</h2>
+    <p><em>Function with No Arguments and No Return Values</em></p>
+
+    <script type="text/javascript">
+        function checkPalindrome() {
+            var num = prompt("Enter a number:");
+            var reverseNum = num.split('').reverse().join('');
+            document.write("<h3>Output:</h3>");
+            if (num === reverseNum) {
+                document.write(num + " is a palindrome.");
+            } else {
+                document.write(num + " is not a palindrome.");
+            }
+        }
+
+        checkPalindrome();
+    </script>
+</body>
+</html>

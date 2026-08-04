@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>createElement Demo</title>
+</head>
+<body>
+    <h2>createElement Demo</h2>
+
+    <script type="text/javascript">
+        // Create a new element in memory
+        const newDiv = document.createElement("div");
+        newDiv.textContent = "This element was created using createElement()";
+        newDiv.id = "dynamic-div";
+        newDiv.className = "custom-box";
+
+        // Apply styles using JavaScript
+        newDiv.style.padding = "15px";
+        newDiv.style.backgroundColor = "lightblue";
+        newDiv.style.border = "2px solid blue";
+        newDiv.style.margin = "10px 0";
+        newDiv.style.fontSize = "18px";
+        newDiv.style.borderRadius = "8px";
+
+        document.write("<h2>createElement Result:</h2>");
+        document.write("<p>New element created successfully and added to the page.</p>");
+
+        // Add the new element to the body
+        document.body.appendChild(newDiv);
+    </script>
+</body>
+</html>

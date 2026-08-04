@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h2>Fibonacci Series</h2>
+    <script type="text/javascript">
+        let a = 0, b = 1, c;
+        let n = parseInt(prompt("Enter the number of terms"));
+        document.write("<h3>Output:</h3>");
+        document.write("The Fibonacci series is:<br>");
+        for (let i = 1; i <= n; i++) {
+            document.write(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    </script>
+</body>
+</html>

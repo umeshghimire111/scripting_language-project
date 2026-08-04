@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementById Demo</title>
+</head>
+<body>
+    <h1 id="mainTitle">Hello from getElementById Demo</h1>
+
+    <script type="text/javascript">
+        // document.getElementById() is fastest way to select unique element
+        const title = document.getElementById("mainTitle");
+        document.write("<h2>getElementById Result:</h2>");
+        document.write("<p>Selected element text: " + title.innerText + "</p>");
+        document.write("<p>Element ID: " + title.id + "</p>");
+
+        // Modify element styling
+        title.style.color = "blue";
+        title.style.fontSize = "24px";
+    </script>
+</body>
+</html>

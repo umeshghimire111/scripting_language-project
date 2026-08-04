@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>querySelector Demo</title>
+</head>
+<body>
+    <div id="first">First Item</div>
+    <div id="second">Second Item</div>
+
+    <script type="text/javascript">
+        // Select by ID using querySelector
+        const first = document.querySelector("#first");
+        document.write("<h2>querySelector Result:</h2>");
+        document.write("<p>First item found: " + first.innerText + "</p>");
+        first.style.color = "red";
+        first.style.fontWeight = "bold";
+    </script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Programs</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --code-bg: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            color: var(--accent);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .program-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.15);
+        }
+
+        .program-title {
+            font-size: 1.25rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .program-meta {
+            display: inline-block;
+            background: #0369a1;
+            color: #e0f2fe;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #a5f3fc;
+            border: 1px solid var(--border);
+            margin-bottom: 1.2rem;
+            max-height: 250px;
+        }
+
+        .btn-run {
+            background-color: var(--accent);
+            color: #0f172a;
+            border: none;
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn-run:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+        }
+
+        .output-box {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #0f172a;
+            border-left: 4px solid var(--accent);
+            border-radius: 4px;
+            font-family: monospace;
+            display: none;
+            word-break: break-word;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>JavaScript Functions Programs</h1>
+        <p class="subtitle">Interactive Collection of 13 Fundamental JavaScript Function Examples</p>
+    </header>
+
+    <div class="program-grid">
+
+        <!-- 1. Sum of Two Numbers -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">1. Sum of Two Numbers</h2>
+                <span class="program-meta">No Arguments | No Return</span>
+                <pre><code>function sumNumbers() {
+    var num1 = parseInt(prompt("Enter first number:"));
+    var num2 = parseInt(prompt("Enter second number:"));
+    var sum = num1 + num2;
+    return "The sum of " + num1 + " and " + num2 + " is " + sum;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg1()">Run Program</button>
+            <div id="out1" class="output-box"></div>
+        </div>
+
+        <!-- 2. Area of Rectangle -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">2. Area of Rectangle</h2>
+                <span class="program-meta">No Arguments | Returns Value</span>
+                <pre><code>function getAreaOfRectangle() {
+    var length = parseInt(prompt("Enter length:"));
+    var width = parseInt(prompt("Enter width:"));
+    return length * width;
+}
+var area = getAreaOfRectangle();</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg2()">Run Program</button>
+            <div id="out2" class="output-box"></div>
+        </div>
+
+        <!-- 3. Check Positive, Negative, or Zero -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">3. Check Positive, Negative, or Zero</h2>
+                <span class="program-meta">With Arguments | No Return</span>
+                <pre><code>function checkNumber(num) {
+    if (num > 0) return num + " is Positive.";
+    else if (num < 0) return num + " is Negative.";
+    else return num + " is Zero.";
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg3()">Run Program</button>
+            <div id="out3" class="output-box"></div>
+        </div>
+
+        <!-- 4. Check Odd or Even -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">4. Check Odd or Even</h2>
+                <span class="program-meta">With Arguments | Returns Value</span>
+                <pre><code>function isEven(num) {
+    return num % 2 === 0;
+}
+if (isEven(number)) { ... }</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg4()">Run Program</button>
+            <div id="out4" class="output-box"></div>
+        </div>
+
+        <!-- 5. Greatest Among Three Numbers -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">5. Greatest Among Three Numbers</h2>
+                <span class="program-meta">No Arguments | No Return</span>
+                <pre><code>function findGreatest() {
+    var num1 = parseInt(prompt("Enter first number:"));
+    var num2 = parseInt(prompt("Enter second number:"));
+    var num3 = parseInt(prompt("Enter third number:"));
+    var greatest = num1;
+    if (num2 > greatest) greatest = num2;
+    if (num3 > greatest) greatest = num3;
+    return "The greatest number is " + greatest;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg5()">Run Program</button>
+            <div id="out5" class="output-box"></div>
+        </div>
+
+        <!-- 6. Smallest Among Three Numbers -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">6. Smallest Among Three Numbers</h2>
+                <span class="program-meta">No Arguments | Returns Value</span>
+                <pre><code>function findSmallest() {
+    var num1 = parseInt(prompt("Enter first number:"));
+    var num2 = parseInt(prompt("Enter second number:"));
+    var num3 = parseInt(prompt("Enter third number:"));
+    return Math.min(num1, num2, num3);
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg6()">Run Program</button>
+            <div id="out6" class="output-box"></div>
+        </div>
+
+        <!-- 7. Calculator Using Switch Case -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">7. Calculator (Switch Case)</h2>
+                <span class="program-meta">With Arguments | No Return</span>
+                <pre><code>function calculator(num1, num2, operation) {
+    switch (operation) {
+        case '+': return "Result: " + (num1 + num2);
+        case '-': return "Result: " + (num1 - num2);
+        case '*': return "Result: " + (num1 * num2);
+        case '/': return "Result: " + (num1 / num2);
+        default: return "Invalid operation.";
+    }
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg7()">Run Program</button>
+            <div id="out7" class="output-box"></div>
+        </div>
+
+        <!-- 8. Multiplication Table -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">8. Multiplication Table</h2>
+                <span class="program-meta">With Arguments | Returns Value</span>
+                <pre><code>function getMultiplicationTable(num) {
+    var table = "";
+    for (var i = 1; i <= 10; i++) {
+        table += num + " x " + i + " = " + (num * i) + "&lt;br&gt;";
+    }
+    return table;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg8()">Run Program</button>
+            <div id="out8" class="output-box"></div>
+        </div>
+
+        <!-- 9. Check Palindrome Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">9. Check Palindrome Number</h2>
+                <span class="program-meta">No Arguments | No Return</span>
+                <pre><code>function checkPalindrome() {
+    var num = prompt("Enter a number:");
+    var reverseNum = num.split('').reverse().join('');
+    if (num === reverseNum) {
+        return num + " is a palindrome.";
+    } else {
+        return num + " is not a palindrome.";
+    }
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg9()">Run Program</button>
+            <div id="out9" class="output-box"></div>
+        </div>
+
+        <!-- 10. Check Armstrong Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">10. Check Armstrong Number</h2>
+                <span class="program-meta">No Arguments | Returns Value</span>
+                <pre><code>function isArmstrong() {
+    var num = prompt("Enter a number:");
+    var sum = 0;
+    var temp = num;
+    while (temp > 0) {
+        var digit = temp % 10;
+        sum += Math.pow(digit, 3);
+        temp = Math.floor(temp / 10);
+    }
+    return sum == num;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg10()">Run Program</button>
+            <div id="out10" class="output-box"></div>
+        </div>
+
+        <!-- 11. Factorial of a Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">11. Factorial of a Number</h2>
+                <span class="program-meta">With Arguments | No Return</span>
+                <pre><code>function factorial(num) {
+    var fact = 1;
+    for (var i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return "The factorial of " + num + " is " + fact;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg11()">Run Program</button>
+            <div id="out11" class="output-box"></div>
+        </div>
+
+        <!-- 12. Display Factors of a Number -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">12. Factors of a Number</h2>
+                <span class="program-meta">With Arguments | Returns Value</span>
+                <pre><code>function getFactors(num) {
+    var factors = [];
+    for (var i = 1; i <= num; i++) {
+        if (num % i === 0) factors.push(i);
+    }
+    return factors;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg12()">Run Program</button>
+            <div id="out12" class="output-box"></div>
+        </div>
+
+        <!-- 13. Fibonacci Series -->
+        <div class="program-card">
+            <div>
+                <h2 class="program-title">13. Fibonacci Series</h2>
+                <span class="program-meta">With Arguments | No Return</span>
+                <pre><code>function fibonacci(n) {
+    var a = 0, b = 1, nextTerm;
+    var res = "Fibonacci Series: " + a + ", " + b;
+    for (var i = 1; i <= n - 2; i++) {
+        nextTerm = a + b;
+        res += ", " + nextTerm;
+        a = b; b = nextTerm;
+    }
+    return res;
+}</code></pre>
+            </div>
+            <button class="btn-run" onclick="runProg13()">Run Program</button>
+            <div id="out13" class="output-box"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Compiled By: Er. Gaurab Mishra | Interactive JavaScript Functions Suite</p>
+    </footer>
+</div>
+
+<script>
+function showOutput(id, content) {
+    var el = document.getElementById(id);
+    el.style.display = 'block';
+    el.innerHTML = "<strong>Output:</strong><br>" + content;
+}
+
+// 1. Sum of Two Numbers
+function sumNumbers() {
+    var num1 = parseInt(prompt("Enter the first number:"));
+    var num2 = parseInt(prompt("Enter the second number:"));
+    if (isNaN(num1) || isNaN(num2)) return "Invalid input.";
+    var sum = num1 + num2;
+    return "The sum of " + num1 + " and " + num2 + " is " + sum;
+}
+function runProg1() {
+    showOutput('out1', sumNumbers());
+}
+
+// 2. Area of Rectangle
+function getAreaOfRectangle() {
+    var length = parseInt(prompt("Enter the length of the rectangle:"));
+    var width = parseInt(prompt("Enter the width of the rectangle:"));
+    if (isNaN(length) || isNaN(width)) return NaN;
+    return length * width;
+}
+function runProg2() {
+    var area = getAreaOfRectangle();
+    showOutput('out2', isNaN(area) ? "Invalid input." : "The area of the rectangle is " + area);
+}
+
+// 3. Positive, Negative, or Zero
+function checkNumber(num) {
+    if (num > 0) return num + " is Positive.";
+    else if (num < 0) return num + " is Negative.";
+    else if (num === 0) return num + " is Zero.";
+    else return "Invalid input.";
+}
+function runProg3() {
+    var number = parseInt(prompt("Enter a number:"));
+    showOutput('out3', checkNumber(number));
+}
+
+// 4. Odd or Even
+function isEven(num) {
+    return num % 2 === 0;
+}
+function runProg4() {
+    var number = parseInt(prompt("Enter a number:"));
+    if (isNaN(number)) {
+        showOutput('out4', "Invalid input.");
+        return;
+    }
+    if (isEven(number)) {
+        showOutput('out4', number + " is Even.");
+    } else {
+        showOutput('out4', number + " is Odd.");
+    }
+}
+
+// 5. Find Greatest Number
+function findGreatest() {
+    var num1 = parseInt(prompt("Enter the first number:"));
+    var num2 = parseInt(prompt("Enter the second number:"));
+    var num3 = parseInt(prompt("Enter the third number:"));
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) return "Invalid input.";
+    var greatest = num1;
+    if (num2 > greatest) greatest = num2;
+    if (num3 > greatest) greatest = num3;
+    return "The greatest number is " + greatest;
+}
+function runProg5() {
+    showOutput('out5', findGreatest());
+}
+
+// 6. Find Smallest Number
+function findSmallest() {
+    var num1 = parseInt(prompt("Enter the first number:"));
+    var num2 = parseInt(prompt("Enter the second number:"));
+    var num3 = parseInt(prompt("Enter the third number:"));
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) return NaN;
+    return Math.min(num1, num2, num3);
+}
+function runProg6() {
+    var smallest = findSmallest();
+    showOutput('out6', isNaN(smallest) ? "Invalid input." : "The smallest number is " + smallest);
+}
+
+// 7. Calculator
+function calculator(num1, num2, operation) {
+    switch (operation) {
+        case '+': return "Result: " + (num1 + num2);
+        case '-': return "Result: " + (num1 - num2);
+        case '*': return "Result: " + (num1 * num2);
+        case '/': return "Result: " + (num1 / num2);
+        default: return "Invalid operation.";
+    }
+}
+function runProg7() {
+    var num1 = parseFloat(prompt("Enter the first number:"));
+    var num2 = parseFloat(prompt("Enter the second number:"));
+    var operation = prompt("Enter an operation (+, -, *, /):");
+    if (isNaN(num1) || isNaN(num2)) {
+        showOutput('out7', "Invalid input numbers.");
+        return;
+    }
+    showOutput('out7', calculator(num1, num2, operation));
+}
+
+// 8. Multiplication Table
+function getMultiplicationTable(num) {
+    var table = "";
+    for (var i = 1; i <= 10; i++) {
+        table += num + " x " + i + " = " + (num * i) + "<br>";
+    }
+    return table;
+}
+function runProg8() {
+    var number = parseInt(prompt("Enter a number for the multiplication table:"));
+    if (isNaN(number)) {
+        showOutput('out8', "Invalid input.");
+        return;
+    }
+    showOutput('out8', getMultiplicationTable(number));
+}
+
+// 9. Palindrome
+function checkPalindrome() {
+    var num = prompt("Enter a number:");
+    if (!num) return "No input provided.";
+    var reverseNum = num.split('').reverse().join('');
+    if (num === reverseNum) {
+        return num + " is a palindrome.";
+    } else {
+        return num + " is not a palindrome.";
+    }
+}
+function runProg9() {
+    showOutput('out9', checkPalindrome());
+}
+
+// 10. Armstrong Number
+function isArmstrong() {
+    var num = prompt("Enter a number:");
+    if (!num) return false;
+    var sum = 0;
+    var temp = parseInt(num);
+    while (temp > 0) {
+        var digit = temp % 10;
+        sum += Math.pow(digit, 3);
+        temp = Math.floor(temp / 10);
+    }
+    return sum == num;
+}
+function runProg10() {
+    var result = isArmstrong();
+    showOutput('out10', result ? "The number is an Armstrong number." : "The number is not an Armstrong number.");
+}
+
+// 11. Factorial
+function factorial(num) {
+    var fact = 1;
+    for (var i = 1; i <= num; i++) {
+        fact *= i;
+    }
+    return "The factorial of " + num + " is " + fact;
+}
+function runProg11() {
+    var number = parseInt(prompt("Enter a number:"));
+    if (isNaN(number) || number < 0) {
+        showOutput('out11', "Invalid non-negative number.");
+        return;
+    }
+    showOutput('out11', factorial(number));
+}
+
+// 12. Factors
+function getFactors(num) {
+    var factors = [];
+    for (var i = 1; i <= num; i++) {
+        if (num % i === 0) {
+            factors.push(i);
+        }
+    }
+    return factors;
+}
+function runProg12() {
+    var number = parseInt(prompt("Enter a number:"));
+    if (isNaN(number) || number <= 0) {
+        showOutput('out12', "Please enter a positive integer.");
+        return;
+    }
+    var factors = getFactors(number);
+    showOutput('out12', "The factors of " + number + " are: " + factors.join(', '));
+}
+
+// 13. Fibonacci
+function fibonacci(n) {
+    if (n <= 0) return "Please enter a positive term count.";
+    if (n === 1) return "Fibonacci Series: 0";
+    var a = 0, b = 1, nextTerm;
+    var res = "Fibonacci Series: " + a + ", " + b;
+    for (var i = 1; i <= n - 2; i++) {
+        nextTerm = a + b;
+        res += ", " + nextTerm;
+        a = b;
+        b = nextTerm;
+    }
+    return res;
+}
+function runProg13() {
+    var n = parseInt(prompt("Enter the number of terms:"));
+    if (isNaN(n)) {
+        showOutput('out13', "Invalid input.");
+        return;
+    }
+    showOutput('out13', fibonacci(n));
+}
+</script>
+
+</body>
+</html>

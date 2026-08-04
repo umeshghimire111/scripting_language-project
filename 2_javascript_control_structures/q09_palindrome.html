@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome or Not</title>
+</head>
+<body>
+    <h2>Check Palindrome Number</h2>
+    <script type="text/javascript">
+        let result = 0, rem, temp;
+        let n = parseInt(prompt("Enter the number"));
+        temp = n;
+        while (n != 0) {
+            rem = n % 10;
+            result = result * 10 + rem;
+            n = parseInt(n / 10);
+        }
+        document.write("<h3>Output:</h3>");
+        if (result == temp) {
+            document.write("The given number is Palindrome");
+        } else {
+            document.write("The given number is not Palindrome");
+        }
+    </script>
+</body>
+</html>

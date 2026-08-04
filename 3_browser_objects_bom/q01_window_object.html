@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Demo</title>
+</head>
+<body>
+    <h2>Window Object Properties and Methods</h2>
+
+    <script type="text/javascript">
+        document.write("<h3>Window Properties:</h3>");
+        document.write("innerWidth (Viewport Width): " + window.innerWidth + "<br>");
+        document.write("innerHeight (Viewport Height): " + window.innerHeight + "<br>");
+        document.write("outerWidth (Browser Width): " + window.outerWidth + "<br>");
+        document.write("outerHeight (Browser Height): " + window.outerHeight + "<br>");
+        document.write("devicePixelRatio: " + window.devicePixelRatio + "<br><br>");
+
+        // Dialog box prompt example
+        alert("Hello! This is a window.alert() demo.");
+        const name = prompt("Enter your name:");
+        const confirmed = confirm("Do you want to proceed?");
+
+        document.write("<strong>Prompt Input:</strong> " + name + "<br>");
+        document.write("<strong>Confirmation:</strong> " + confirmed + "<br>");
+    </script>
+</body>
+</html>
