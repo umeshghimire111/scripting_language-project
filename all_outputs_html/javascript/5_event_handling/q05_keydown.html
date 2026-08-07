@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html> 
+    <head>
+        <title>keydown Event</title>
+    </head> 
+    <body>
+         <h1>Press any key on keyboard</h1> 
+
+<script> 
+ document.addEventListener("keydown", function(e) {
+
+ document.write("<p>Key Pressed: <strong>" + e.key + "</strong></p>");
+  if(e.key === "Enter") { 
+ document.write("<p style='color:red'>Enter key pressed!</p>");    
+  } });
+   </script>
+ </body>
+    </html> 
